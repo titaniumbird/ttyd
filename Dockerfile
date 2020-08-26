@@ -21,13 +21,16 @@ RUN apt-get update; apt-get install -y --no-install-recommends \
 	tmux \
         curl \
         htop \
+	vnstat \
+	file \
         net-tools \
         && apt-get autoclean \
         && apt-get autoremove \
         && pip3 install gdown \
         && pip3 install speedtest-cli \
         && rm -rf /var/lib/apt/lists/*
-    
+	
+RUN curl --compressed -s https://raw.githubusercontent.com/labbots/google-drive-upload/master/install.sh | sh -s
     
 ADD ./mc /app/mc
 RUN chmod +x /app/mc && mv /app/mc /usr/local/bin/
