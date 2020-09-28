@@ -9,7 +9,9 @@ ADD https://github.com/krallin/tini/releases/download/v0.18.0/tini /sbin/tini
 RUN chmod +x /sbin/tini
 
 RUN apt-get update; apt-get install -y --no-install-recommends \
-    python3 \
+        libnss3 \
+	libasound2 \
+	python3 \
 	python3-setuptools \
 	python3-pip \
 	zip \
@@ -30,8 +32,8 @@ RUN apt-get update; apt-get install -y --no-install-recommends \
         && pip3 install speedtest-cli \
         && rm -rf /var/lib/apt/lists/*
 	
-RUN curl --compressed -s https://raw.githubusercontent.com/labbots/google-drive-upload/master/install.sh | sh -s
-    
+COPY otohits.sh /root
+RUN chmod +x /root/otohits.sh    
 ADD ./mc /app/mc
 RUN chmod +x /app/mc && mv /app/mc /usr/local/bin/
 ENV LOGIN_USER admin
