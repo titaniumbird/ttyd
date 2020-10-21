@@ -4,16 +4,6 @@
   "description": "ttyd on Heroku",
   "env": {
    
-    "BUILD_TARGET":{
-     "description": "DO NOT CHANGE",
-     "value": "x86_64"
-    },
-   
-     "WITH_SSL": {
-      "description": "DO NOT CHANGE",
-      "value": "false"
-     },
-   
     "LOGIN_PASSWORD": {
        "description": "PASSWORD for Basic Auth Login",
        "value": "admin"
