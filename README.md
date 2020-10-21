@@ -1,25 +1,12 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-# ttyd - Share your terminal over the web ![backend](https://github.com/tsl0922/ttyd/workflows/backend/badge.svg) ![frontend](https://github.com/tsl0922/ttyd/workflows/frontend/badge.svg)
+# ttyd - Share your terminal over the web 
 
-ttyd is a simple command-line tool for sharing terminal over the web.
+ttyd is a simple command-line tool for sharing terminal over the web. Based on [ttyd](https://github.com/tsl0922/ttyd)
 
 # Optional
 
-I've included the minio client binary file(mc) in this repo. Head over to [heroku-minio](https://github.com/capriciousduck/heroku-minio) to host your own MinIO server on Heroku. Remember to make a HTTP request to your app, for example, from UptimeRobot to prevent the dyno from sleeping.
-
-![screenshot](https://github.com/tsl0922/ttyd/raw/master/screenshot.gif)
-
-# Features
-
-- Built on top of [Libwebsockets](https://libwebsockets.org) with [libuv](https://libuv.org) for speed
-- Fully-featured terminal based on [Xterm.js](https://xtermjs.org) with [CJK](https://en.wikipedia.org/wiki/CJK_characters) and IME support
-- Graphical [ZMODEM](https://en.wikipedia.org/wiki/ZMODEM) integration with [lrzsz](https://ohse.de/uwe/software/lrzsz.html) support
-- SSL support based on [OpenSSL](https://www.openssl.org)
-- Run any custom command with options
-- Basic authentication support and many other custom options
-- Cross platform: macOS, Linux, FreeBSD/OpenBSD, [OpenWrt](https://openwrt.org), Windows
-
+I've included the minio client binary file(mc) in this repo. Head over to [minio](https://github.com/capriciousduck/minio) to host your own MinIO server on Heroku. Remember to make a HTTP request to your app, for example, from UptimeRobot to prevent the dyno from sleeping.
 
 ## Command-line Options For Use In Dockerfile
 
