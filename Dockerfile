@@ -20,6 +20,7 @@ RUN apt-get update; apt-get install -y --no-install-recommends \
 	systemd \
 	docker.io \
         net-tools \
+	git \
         && apt-get autoclean \
         && apt-get autoremove \
         && pip3 install gdown \
