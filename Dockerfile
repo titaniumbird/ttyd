@@ -6,6 +6,7 @@ RUN apt-get update; apt-get install -y --no-install-recommends \
 	python3 \
 	python3-setuptools \
 	python3-pip \
+	openssh-server \
 	zip \
 	unzip \
 	p7zip-full \
@@ -24,11 +25,9 @@ RUN apt-get update; apt-get install -y --no-install-recommends \
         && apt-get autoclean \
         && apt-get autoremove \
         && pip3 install gdown \
-        && pip3 install speedtest-cli \
         && rm -rf /var/lib/apt/lists/*
 	
-COPY otohits.sh /root
-RUN chmod +x /root/otohits.sh    
+    
 ADD ./mc /app/mc
 RUN chmod +x /app/mc && mv /app/mc /usr/local/bin/
 ENV LOGIN_USER admin
